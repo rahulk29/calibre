@@ -1,0 +1,16 @@
+[package]
+name = "calibre"
+version = "0.0.2"
+edition = "2021"
+authors = ["Rahul Kumar <rahulkumar@berkeley.edu>", "Rohan Kumar <rohankumar@berkeley.edu>"]
+description = "A public wrapper around the Calibre API"
+repository = "https://github.com/rahulk29/calibre"
+license = "BSD-3-Clause"
+
+[dependencies]
+inner = { package = "calibre", git = "ssh://git@bwrcrepo.eecs.berkeley.edu/rahulkumar/calibre.git", branch = "master", optional = true }
+
+[features]
+commercial = ["dep:inner"]
+
+default = []
